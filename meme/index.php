@@ -11,8 +11,8 @@ if ($files) {
    ## $link = 'https://api.wuffs.net/?i='.$random_fox_index;
 } else {
     $image_path = null;
-    $link = null;
+  #  $link = null;
 }
-$data = ['image' => $image_path, 'link' => $link];
-
+#$data = ['image' => $image_path, 'link' => $link];
+$data = ['image' => $image_path];
 echo json_encode($data);
