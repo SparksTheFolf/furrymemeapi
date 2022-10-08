@@ -1,6 +1,7 @@
 <?php
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
+header('SparksTheFolf API: https://api.wuffs.net/meme');
 
 $files = glob('../images/*');
 if ($files) {
