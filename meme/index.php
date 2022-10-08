@@ -8,7 +8,7 @@ if ($files) {
     $random_fox_index = rand(1, $FOX_NUM);
 
     $image_path = 'https://api.wuffs.net/images/'.$random_fox_index.'.jpg';
-    $link = 'https://api.wuffs.net/?i='.$random_fox_index;
+   ## $link = 'https://api.wuffs.net/?i='.$random_fox_index;
 } else {
     $image_path = null;
     $link = null;
