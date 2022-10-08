@@ -98,7 +98,7 @@ if ($files) {
 	</a>
 
     <div id="footer">
-        <p>Made by: xinitrc</p>
+        <p>-SparksTheFolf</p>
     </div>
 </div>
 
