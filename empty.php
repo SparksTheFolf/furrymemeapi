@@ -64,10 +64,8 @@ if ($files) {
             padding: 5px;
         }
 		#fox_full_link {
-			max-width: calc(100% - 240px);
 			max-height: 100%;
             background: transparent url('https://api.wuffs.net/images/<?= $random_fox_index ?>.jpg') 0 0/contain no-repeat;
-			margin: 10px;
 		}
         #fox_img_link {
             float: left;
