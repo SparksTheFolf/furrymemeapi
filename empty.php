@@ -58,27 +58,19 @@ if ($files) {
 			align-items: center;
 			max-height: 100%;
 		}
-        #sidebar {
-            float: left;
-            width: 200px;
-            padding: 5px;
-        }
 		#fox_full_link {
 			max-height: 100%;
             background: transparent url('https://api.wuffs.net/images/<?= $random_fox_index ?>.jpg') 0 0/contain no-repeat;
 		}
         #fox_img_link {
-            float: left;
-            margin: 10px;
 			max-width: 100%;
-            border: 2px solid #ccc;
         }
     </style>
 </head>
 <body>
 <div id="panel">
 
-	<a href="https://api.wuffs.net/images/<?= $random_fox_index ?>" id="fox_full_link">
+	<a href="https://api.wuffs.net/images/<?= $random_fox_index ?>.jpg" id="fox_full_link">
 		<img src="https://api.wuffs.net/images/<?= $random_fox_index ?>.jpg" alt="" title="" style="visibility: hidden;" id="fox_img_link" />
 	</a>
 
