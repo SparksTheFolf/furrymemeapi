@@ -49,3 +49,4 @@ if ($valid_request == TRUE){
     $data = array('error' => $error_msg,'status' => '420');
 }
 echo json_encode($data);
+echo "Im being slowly killed from some deer";
