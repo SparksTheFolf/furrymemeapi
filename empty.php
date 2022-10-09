@@ -79,19 +79,6 @@ if ($files) {
 </head>
 <body>
 <div id="panel">
-	<div id="sidebar">
-		<label for=shareButton><strong>Share this meme!</strong></label>
-		<input type="text" id="shareButton" value="https://api.wuffs.net/?i=<?= $random_fox_index ?>" onclick="this.select();" /><br />
-
-		<p id="fox_count">Memes Counter: <?= $FOX_NUM ?><br />
-			<a href="https://github.com/SparksTheFolf/furrymemeapi">Add more memes!</a></p>
-
-            
-		<br /><br /><br />
-		<p>API is Available: <a href="https://api.wuffs.net/meme">https://api.wuffs.net/meme</a></p>
-
-
-	</div>
 
 	<a href="https://api.wuffs.net/?i=<?= $random_fox_index ?>" id="fox_full_link">
 		<img src="https://api.wuffs.net/images/<?= $random_fox_index ?>.jpg" alt="" title="" style="visibility: hidden;" id="fox_img_link" />
