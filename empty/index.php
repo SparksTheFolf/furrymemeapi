@@ -9,6 +9,4 @@ if ($files) {
 
     $image_path = 'https://api.wuffs.net/images/'.$random_fox_index.'.jpg';
 }
-#$data = ['image' => $image_path, 'link' => $link];
-$data = ['image'];
-echo json_encode($data);
+echo json_encode(['image' => $image_path]);
