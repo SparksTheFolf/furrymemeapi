@@ -79,10 +79,15 @@ if ($files) {
 </head>
 <body>
 <div id="panel">
+	<div id="sidebar">
+		<input type="text" id="shareButton" value="https://api.wuffs.net/?i=<?= $random_fox_index ?>" onclick="this.select();" /><br />
+
+	</div>
 
 	<a href="https://api.wuffs.net/?i=<?= $random_fox_index ?>" id="fox_full_link">
 		<img src="https://api.wuffs.net/images/<?= $random_fox_index ?>.jpg" alt="" title="" style="visibility: hidden;" id="fox_img_link" />
 	</a>
+
 </div>
 
 </body>
