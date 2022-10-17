@@ -18,7 +18,7 @@
 	<meta name="theme-color" content="#FF6600" />
 	<meta http-equiv="Cache-Control" content="max-age=1" />
 
-    <meta property="og:image" content="https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?=$random_fox_index?>.jpg" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?= $random_fox_index ?>.jpg" />
     <meta property="og:title" content="api.wuffs.net" />
     <meta property="og:description" content="New furry meme :)" />
     <meta property="og:url" content="https://api.wuffs.net" />
@@ -59,7 +59,7 @@
 		#fox_full_link {
 			max-width: calc(100% - 240px);
 			max-height: 100%;
-            background: transparent url("https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?=$random_fox_index?>.jpg") 0 0/contain no-repeat);
+            background: transparent url("https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?= $random_fox_index ?>.jpg") 0 0/contain no-repeat);
 			margin: 10px;
 		}
         #fox_img_link {
@@ -74,20 +74,20 @@
 <div id="panel">
 	<div id="sidebar">
 		<label for=shareButton><strong>Share this meme!</strong></label>
-		<input type="text" id="shareButton" value="https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?=$random_fox_index?>.jpg" onclick="this.select();" /><br />
+		<input type="text" id="shareButton" value="https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?= $random_fox_index ?>.jpg" onclick="this.select();" /><br />
 
 		<p id="fox_count">Memes Counter: <?= $FOX_NUM ?><br />
 			<a href="https://github.com/SparksTheFolf/furrymemeapi">Add more memes!</a></p>
 
             
 		<br /><br /><br />
-		<p>API is Available: <a href="https://api.wuffs.net/meme">https://api.wuffs.net/meme</a></p>
+		<p>API is Available: <a href="https://api.wuffs.net/api/v2/getmemes/">https://api.wuffs.net/api/v2/getmemes/</a></p>
 
 
 	</div>
 
-	<a href="https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?=$random_fox_index?>.jpg" id="fox_full_link">
-		<img src="https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?=$random_fox_index?>.jpg" alt="" title="" style="visibility: hidden;" id="fox_img_link" />
+	<a href="https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?= $random_fox_index ?>.jpg" id="fox_full_link">
+		<img src="https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?= $random_fox_index?>.jpg" alt="" title="" style="visibility: hidden;" id="fox_img_link" />
 	</a>
 
     <div id="footer">
