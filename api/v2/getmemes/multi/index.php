@@ -47,6 +47,6 @@ if ($valid_request == TRUE){
     $data = array('images' => $image_paths);
 
 } else {
-    $data = array('error' => $error_msg,'status' => '420');
+    $data = array('error' => $error_msg,'status' => '420', 'msg' => 'please note V2 is still in DEV', 'version' => '2022.0.2.34');
 }
 echo json_encode($data);
