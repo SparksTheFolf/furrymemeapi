@@ -59,7 +59,7 @@
 		#fox_full_link {
 			max-width: calc(100% - 240px);
 			max-height: 100%;
-            background: transparent url("https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?= $random_fox_index ?>.jpg") 0 0/contain no-repeat);
+            background: transparent url("https://s.wuffs.net/api<?= $random_fox_index ?>") 0 0/contain no-repeat);
 			margin: 10px;
 		}
         #fox_img_link {
@@ -86,8 +86,8 @@
 
 	</div>
 
-	<a href="https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?= $random_fox_index ?>.jpg" id="fox_full_link">
-		<img src="https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?= $random_fox_index?>.jpg" alt="" title="" style="visibility: visible;" id="fox_img_link" />
+	<a href="https://s.wuffs.net/api<?= $random_fox_index ?>" id="fox_full_link">
+		<img src="https://s.wuffs.net/api<?= $random_fox_index ?>" alt="" title="" style="visibility: visible;" id="fox_img_link" />
 	</a>
 
     <div id="footer">
