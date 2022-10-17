@@ -44,7 +44,7 @@ if ($files and isset($_GET['count'])) {
     $error_msg = '\'count\' needs to be specified';
 }
 if ($valid_request == TRUE){
-    $data = array('images' => $image_paths, 'links' => $links);
+    $data = array('images' => $image_paths);
 
 } else {
     $data = array('error' => $error_msg,'status' => '420');
