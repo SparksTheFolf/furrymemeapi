@@ -66,7 +66,7 @@ if ($files) {
 		#fox_full_link {
 			max-width: calc(100% - 240px);
 			max-height: 100%;
-            background: transparent url('https://api.wuffs.net/images/<?= $random_fox_index ?>.jpg') 0 0/contain no-repeat;
+            background: transparent url("https://s.wuffs.net/api<?= $random_fox_index?>") 0 0/contain no-repeat);
 			margin: 10px;
 		}
         #fox_img_link {
@@ -81,7 +81,7 @@ if ($files) {
 <div id="panel">
 	<div id="sidebar">
 		<label for=shareButton><strong>Share this meme!</strong></label>
-		<input type="text" id="shareButton" value="https://api.wuffs.net/?i=<?= $random_fox_index ?>" onclick="this.select();" /><br />
+		<input type="text" id="shareButton" value="https://s.wuffs.net/api<?= $random_fox_index?>" onclick="this.select();" /><br />
 
 		<p id="fox_count">Memes Counter: <?= $FOX_NUM ?><br />
 			<a href="https://github.com/SparksTheFolf/furrymemeapi">Add more memes!</a></p>
@@ -93,8 +93,8 @@ if ($files) {
 
 	</div>
 
-	<a href="https://api.wuffs.net/?i=<?= $random_fox_index ?>" id="fox_full_link">
-		<img src="https://api.wuffs.net/images/<?= $random_fox_index ?>.jpg" alt="" title="" style="visibility: hidden;" id="fox_img_link" />
+	<a href="https://s.wuffs.net/api<?= $random_fox_index?>" id="fox_full_link">
+		<img src="https://s.wuffs.net/api<?= $random_fox_index?>" alt="" title="" style="visibility: hidden;" id="fox_img_link" />
 	</a>
 
     <div id="footer">
