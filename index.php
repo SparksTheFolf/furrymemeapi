@@ -81,7 +81,7 @@ if ($files) {
 <div id="panel">
 	<div id="sidebar">
 		<label for=shareButton><strong>Share this meme!</strong></label>
-		<input type="text" id="shareButton" value="https://s.wuffs.net/api<?= $random_fox_index?>" onclick="this.select();" /><br />
+		<input type="text" id="shareButton" value="https://s.wuffs.net/api<?=$random_fox_index?>" onclick="this.select();" /><br />
 
 		<p id="fox_count">Memes Counter: <?= $FOX_NUM ?><br />
 			<a href="https://github.com/SparksTheFolf/furrymemeapi">Add more memes!</a></p>
