@@ -25,7 +25,7 @@ if ($files) {
 	<meta name="theme-color" content="#FF6600" />
 	<meta http-equiv="Cache-Control" content="max-age=1" />
 
-    <meta property="og:image" content="https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?= $random_fox_index?>.jpg" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?=$random_fox_index?>.jpg" />
     <meta property="og:title" content="api.wuffs.net" />
     <meta property="og:description" content="New furry meme :)" />
     <meta property="og:url" content="https://api.wuffs.net" />
@@ -66,7 +66,7 @@ if ($files) {
 		#fox_full_link {
 			max-width: calc(100% - 240px);
 			max-height: 100%;
-            background: transparent url("https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?= $random_fox_index?>.jpg") 0 0/contain no-repeat);
+            background: transparent url("https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?=$random_fox_index?>.jpg") 0 0/contain no-repeat);
 			margin: 10px;
 		}
         #fox_img_link {
@@ -93,8 +93,8 @@ if ($files) {
 
 	</div>
 
-	<a href="https://s.wuffs.net/api<?= $random_fox_index?>" id="fox_full_link">
-		<img src="https://s.wuffs.net/api<?= $random_fox_index?>" alt="" title="" style="visibility: hidden;" id="fox_img_link" />
+	<a href="https://s.wuffs.net/api<?=$random_fox_index?>" id="fox_full_link">
+		<img src="https://s.wuffs.net/api<?=$random_fox_index?>" alt="" title="" style="visibility: hidden;" id="fox_img_link" />
 	</a>
 
     <div id="footer">
