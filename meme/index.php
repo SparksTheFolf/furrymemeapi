@@ -7,12 +7,9 @@ if ($files) {
     $FOX_NUM = count($files);
     $random_fox_index = rand(1, $FOX_NUM);
 
-    $image_path = 'https://api.wuffs.net/images/'.$random_fox_index.'.jpg';
-    $link = 'https://api.wuffs.net/?i='.$random_fox_index;
+    $link = 'https://s.wuffs.net/api'.$random_fox_index;
 } else {
-    $image_path = null;
     $link = null;
 }
-$data = ['image' => $image_path, 'link' => $link];
-$data = ['image' => $image_path];
+$data = ['image' => $link, 'version' => '2022.0.4.15'];
 echo json_encode($data);
