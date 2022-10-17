@@ -43,7 +43,7 @@ if ($files and isset($_GET['count'])) {
     header('HTTP/1.1 420 Need to specify COUNT');
     $error_msg = '\'count\' needs to be specified';
 }
-if ($valid_request == TRUE){
+if ($valid_request){
     $data = array('images' => $image_paths);
 
 } else {
