@@ -71,6 +71,7 @@
     </style>
 </head>
 <body>
+<iframe src= 'https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?= $random_fox_index ?>.jpg' title="description"></iframe>
 <div id="panel">
 	<div id="sidebar">
 		<label for=shareButton><strong>Share this meme!</strong></label>
