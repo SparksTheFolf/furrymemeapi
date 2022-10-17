@@ -23,7 +23,7 @@
     <meta property="og:description" content="New furry meme :)" />
     <meta property="og:url" content="https://api.wuffs.net" />
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
     <script>
         $(document).ready(function () {
             var panel_width = document.getElementById('sidebar').offsetWidth;
