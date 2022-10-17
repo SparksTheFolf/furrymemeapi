@@ -46,6 +46,6 @@ if ($valid_request == TRUE){
     $data = array('images' => $image_paths, 'links' => $links, 'msg' => "V1 WILL soon be phased out, please switch to V2 of the api");
     
 } else {
-    $data = array('apiStatus' => 'non-responsive/Non-Working', 'error' => $error_msg,'status' => '420', 'msg' => "V1 WILL soon be phased out, please switch to V2 of the api");
+    $data = array('apiStatus' => 'non-responsive/Non-Working', 'error' => $error_msg,'status' => '405', 'msg' => "V1 WILL soon be phased out, please switch to V2 of the api");
 }
 echo json_encode($data);
