@@ -81,7 +81,7 @@
 
             
 		<br /><br /><br />
-		<p>API is Available: <a href="https://s.wuffs.net/api">https://s.wuffs.net/api</a></p>
+		<p>API is Available: <a href="https://api.wuffs.net/api">https://api.wuffs.net/api</a></p>
 
 
 	</div>
