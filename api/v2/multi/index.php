@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 
 $MAX_ALLOWED_COUNT = 20;
 $valid_request = FALSE;
-$FOX_NUM = 14;
+$FOX_NUM = 32;
 $random_fox_index = rand(1, $FOX_NUM);
 $files = glob('../../../images/*');
 if ($files and isset($_GET['count'])) {

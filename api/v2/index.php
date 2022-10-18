@@ -2,7 +2,7 @@
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
-$FOX_NUM = 14;
+$FOX_NUM = 32;
 $random_fox_index = rand(1, $FOX_NUM);
 
 $image_path = 'https://s.wuffs.net/api'.$random_fox_index;
