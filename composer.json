@@ -1,5 +1,38 @@
 {
+    "title": "FurryMemeApi",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "format": "int64"
+        },
+        "name": {
+            "type": "FurryMemeApi"
+        },
+        "url": {
+            "type": "https://github.com/SparksTheFolf/furrymemeapi"
+        },
+        "description": {
+            "type": "string"
+        },
+        "nsfw": {
+            "type": "none"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "updated_at": {
+            "type": "string",
+            "format": "date-time"
+        }
+    },
+    "license": [
+        "LGPL-2.1-only",
+        "GPL-3.0-or-later"
+    ],
     "require": {
+        "php": ">=7.4",
         "kreait/firebase-php": "^6.9"
     }
 }
