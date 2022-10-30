@@ -1,19 +1,19 @@
 <?php return array(
     'root' => array(
-        'name' => '__root__',
+        'name' => 'sparksthefolf/furrymemeapi',
         'pretty_version' => 'dev-Master',
         'version' => 'dev-Master',
-        'reference' => '128fe1c9ae266cedddda2d3243d456f8d81f2888',
+        'reference' => '05ead5c2753cab571efa1bce9542f02f3e4052ab',
         'type' => 'object',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
-        '__root__' => array(
+        'sparksthefolf/furrymemeapi' => array(
             'pretty_version' => 'dev-Master',
             'version' => 'dev-Master',
-            'reference' => '128fe1c9ae266cedddda2d3243d456f8d81f2888',
+            'reference' => '05ead5c2753cab571efa1bce9542f02f3e4052ab',
             'type' => 'object',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

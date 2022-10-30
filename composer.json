@@ -1,18 +1,9 @@
 {
     "description" : "Furrymemeapi for memers",
     "name" : "sparksthefolf/furrymemeapi",
-    "title": "FurryMemeApi",
     "type": "object",
     "license": [
         "LGPL-2.1-only",
         "GPL-3.0-or-later"
-    ],
-    "required": [
-        "name",
-        "description",
-        "url",
-        "nsfw",
-        "created_at",
-        "updated_at"
     ]
 }
