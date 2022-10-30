@@ -1,32 +1,8 @@
 {
     "description" : "Furrymemeapi for memers",
+    "name" : "furrymemeapi",
     "title": "FurryMemeApi",
     "type": "object",
-    "properties": {
-        "name": {
-        "type": "string",
-        "description": "Package name, including 'vendor-name/' prefix.",
-        "pattern": "^[a-z0-9]([_.-]?[a-z0-9]+)*/[a-z0-9](([_.]|-{1,2})?[a-z0-9]+)*$"
-        },
-        "description": {
-        "type": "string",
-        "description": "Short package description."
-        },
-        "url": {
-            "type": "string"
-        },
-        "nsfw": {
-            "type": "boolean"
-        },
-        "created_at": {
-            "type": "string",
-            "format": "date-time"
-        },
-        "updated_at": {
-            "type": "string",
-            "format": "date-time"
-        }
-    },
     "license": [
         "LGPL-2.1-only",
         "GPL-3.0-or-later"
