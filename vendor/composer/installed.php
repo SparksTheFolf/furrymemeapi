@@ -3,7 +3,7 @@
         'name' => 'sparksthefolf/furrymemeapi',
         'pretty_version' => 'dev-Master',
         'version' => 'dev-Master',
-        'reference' => '05ead5c2753cab571efa1bce9542f02f3e4052ab',
+        'reference' => '4887c61455f1c80a254c5ffb07a8bc908a59be21',
         'type' => 'object',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'sparksthefolf/furrymemeapi' => array(
             'pretty_version' => 'dev-Master',
             'version' => 'dev-Master',
-            'reference' => '05ead5c2753cab571efa1bce9542f02f3e4052ab',
+            'reference' => '4887c61455f1c80a254c5ffb07a8bc908a59be21',
             'type' => 'object',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
