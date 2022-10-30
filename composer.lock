@@ -1,4 +1,6 @@
 {
+    "title": "FurryMemeApi",
+    "type": "object",
     "name": {
         "type": "FurryMemeApi",
         "description": "Package name, including 'vendor-name/' prefix.",
