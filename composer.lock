@@ -1,4 +1,20 @@
 {
+    "name": {
+        "type": "FurryMemeApi",
+        "description": "Package name, including 'vendor-name/' prefix.",
+        "pattern": "^[a-z0-9]([_.-]?[a-z0-9]+)*/[a-z0-9](([_.]|-{1,2})?[a-z0-9]+)*$"
+        },
+        "description": {
+        "type": "FurryMemeApi owo",
+        "description": "Short package description."
+        },
+        "license": {
+        "type": [
+        "Apache",
+        "array"
+        ],
+        "description": "License name. Or an array of license names."
+        },
     "_readme": [
         "This file locks the dependencies of your project to a known state",
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
