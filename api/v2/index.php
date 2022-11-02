@@ -24,10 +24,7 @@ $json = json_encode(array(
         'aboutMeme' => $pagecontents
     ),
     "data" => array(
-        'serverVersion' => $serverVersion,
-        'releaseVersion' => $releaseVersion,
-        'requestedTime' => date('Y-m-d H:i:s'),
-        'locale' => "en-US"
+        'dataServ' => 'https://api.wuffs.net/api/v2/data'
     )
 ));
 
