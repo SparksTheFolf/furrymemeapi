@@ -15,3 +15,5 @@ $json = json_encode(array(
         'locale' => "en-US"
     )
 ));
+
+echo $json;
