@@ -26,4 +26,4 @@ for ($i = 0; $i<=9; $i++)
     $total += ping('api.wuffs.net');
 }
 
-echo $total;
+echo json_encode($total);
