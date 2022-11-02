@@ -10,7 +10,7 @@ $version = '2022.0.5.1';
 $image_path = 'https://s.wuffs.net/api'.$random_fox_index;
 $qr = 'https://s.wuffs.net/api'.$random_fox_index.'.qr';
 $link = 'https://github.com/SparksTheFolf/apiphotos/blob/Master/'.$random_fox_index.'.jpg?raw=true';
-$pagecontents = file_get_contents("https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/txt/'.$random_fox_index.'.txt");
+$pagecontents = file_get_contents("https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/txt/'.$random_fox_index.'.txt") or die("NULL /// No about file found");
 
 
 $json = json_encode(array(
