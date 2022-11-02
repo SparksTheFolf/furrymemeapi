@@ -18,7 +18,7 @@ $json = json_encode(array(
         'image' => $image_path,
         'rawLink' => $link,
         'qrCode' => $qr,
-        'about' => $pagecontents
+        'aboutMeme' => $pagecontents
     ),
     "data" => array(
         'version' => $version,
