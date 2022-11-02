@@ -13,22 +13,15 @@ $link = 'https://github.com/SparksTheFolf/apiphotos/blob/Master/'.$random_fox_in
 $pagecontents = file_get_contents("https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/txt/'.$random_fox_index.'.txt");
 
 
-$data = ['image' => $image_path,
-        'rawLink' => $link,
-        'qrCode' => $qr,
-        'about' => $pagecontents,
-        'Version' => $version];
-
 $json = json_encode(array(
     "client" => array(
-        "build" => "1.0",
-        "name" => "xxxxxx",
-        "version" => "1.0"
+        'image' => $image_path,
+        'rawLink' => $link,
+        'qrCode' => $qr,
+        'about' => $pagecontents
     ),
-    "protocolVersion" => 4,
     "data" => array(
-        "distributorId" => "xxxx",
-        "distributorPin" => "xxxx",
+        'version' => $version,
         "locale" => "en-US"
     )
 ));
