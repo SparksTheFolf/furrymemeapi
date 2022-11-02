@@ -29,11 +29,5 @@ $json = json_encode(array(
 ));
 
 echo $json;
-?>
 
-<html>
-<head>
-    <title>API V2: <?php $random_fox_index?></title>
-</head>
-</html>
 
