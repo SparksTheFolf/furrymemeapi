@@ -10,10 +10,10 @@ Versions are listed in chronological order.
 | Version    | Supported          |
 |------------|--------------------|
 | 2022.1.0.x | :white_check_mark: |
-| 2022.5.1.x | :white_check_mark: |
-| 2022.5.0.x | :x:                |
-| 2022.4.0.x | :x:                |
-| < 2022.3.0 | :x:                |
+| 2022.0.5.x | :white_check_mark: |
+| 2022.0.4.x | :x:                |
+| 2022.0.3.x | :x:                |
+| < 2022.0.2 | :x:                |
 
 ## Reporting a Vulnerability
 
