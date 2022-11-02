@@ -23,7 +23,7 @@ function ping($host, $timeout = 10)
 $total = 0;
 for ($i = 0; $i<=9; $i++)
 {
-    $total += ping('https://api.wuffs.net/');
+    $total += ping('api.wuffs.net');
 }
 
 echo $total;
