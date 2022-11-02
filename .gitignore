@@ -1,7 +1,5 @@
 *.db
-.htaccess
 ._*
 Thumbs.db
 keybase.txt
-robots.txt
 sitemap.xml
