@@ -8,7 +8,7 @@ $serverVersion = '2022.0.5.1';
 $releaseVersion = '2022.1.0.0';
 
 $json = json_encode(array(
-    "data" => array(
+    "serverData" => array(
         'serverVersion' => $serverVersion,
         'releaseVersion' => $releaseVersion,
         'requestedTime' => date('Y-m-d H:i:s'),
