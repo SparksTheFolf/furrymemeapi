@@ -24,7 +24,7 @@ $json = json_encode(array(
         'aboutMeme' => $pagecontents
     ),
     "data" => array(
-        'dataServ' => 'https://api.wuffs.net/api/v2/data'
+        'dataServ' => 'https://api.wuffs.net/api/data'
     )
 ));
 
