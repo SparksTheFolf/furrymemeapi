@@ -6,7 +6,9 @@ header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
 
 $FOX_NUM = 32;
 $random_fox_index = rand(1, $FOX_NUM);
-$version = '2022.0.5.1';
+$serverVersion = '2022.0.5.1';
+$releaseVersion = '2022.1.0.0';
+
 
 $image_path = 'https://s.wuffs.net/api'.$random_fox_index;
 $qr = 'https://s.wuffs.net/api'.$random_fox_index.'.qr';
@@ -22,8 +24,10 @@ $json = json_encode(array(
         'aboutMeme' => $pagecontents
     ),
     "data" => array(
-        'version' => $version,
-        "locale" => "en-US"
+        'serverVersion' => $serverVersion,
+        'releaseVersion' => $releaseVersion,
+        'requestedTime' => date('Y-m-d H:i:s'),
+        'locale' => "en-US"
     )
 ));
 
