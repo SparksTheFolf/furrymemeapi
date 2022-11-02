@@ -15,7 +15,6 @@ $pagecontents = file_get_contents("https://raw.githubusercontent.com/SparksTheFo
 $data = ['image' => $image_path,
         'rawLink' => $link,
         'qrCode' => $qr,
-        'textDef' => $pagecontents,
-        'TXT' => 'Please use JSON decoder for api',
+        'about' => $pagecontents,
         'Version' => $version];
 echo json_encode($data);
