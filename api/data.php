@@ -11,6 +11,7 @@ $json = json_encode(array(
     "serverData" => array(
         'serverVersion' => $serverVersion,
         'releaseVersion' => $releaseVersion,
+        'currentAPI' => 'v2',
         'requestedTime' => date('Y-m-d H:i:s'),
         'locale' => "en-US"
     )
