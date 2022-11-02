@@ -9,10 +9,13 @@ $version = '2022.0.5.1';
 $image_path = 'https://s.wuffs.net/api'.$random_fox_index;
 $qr = 'https://s.wuffs.net/api'.$random_fox_index.'.qr';
 $link = 'https://github.com/SparksTheFolf/apiphotos/blob/Master/'.$random_fox_index.'.jpg?raw=true';
+$openfiletxt = fopen("https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/txt/13.txt", "r") or die("Unable to open file!");
+
 
 $data = ['image' => $image_path,
         'rawLink' => $link,
         'qrCode' => $qr,
+        'textDef' => $openfiletxt,
         'TXT' => 'Please use JSON decoder for api',
         'Version' => $version];
 echo json_encode($data);
