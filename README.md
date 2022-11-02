@@ -9,3 +9,6 @@ Hello OwO
 Code Maintained by [SparksTheFolf](mailto:sparks@wuffs.net)\
 Code Licensed under [MIT](LICENSE)\
 The security policy is located in [SECURITY.md](SECURITY.md)
+
+## Well-Known Security.txt Vulnerabilities report
+[Security.txt](https://wuffs.net/.well-known/security.txt) is a standard for reporting security vulnerabilities.
