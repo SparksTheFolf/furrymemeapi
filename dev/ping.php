@@ -26,4 +26,4 @@ for ($i = 0; $i<=9; $i++)
     $total += ping('www.google.com');
 }
 
-echo $total/10;
+echo $total;
