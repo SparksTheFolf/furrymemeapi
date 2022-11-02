@@ -1,6 +1,7 @@
 <?php
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
+header('Access-Control-Allow-Methods: GET');
 
 $FOX_NUM = 32;
 $random_fox_index = rand(1, $FOX_NUM);
