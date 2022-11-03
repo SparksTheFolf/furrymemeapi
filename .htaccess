@@ -1,3 +1,6 @@
 RewriteEngine On
 RewriteRule ^api/data$ /api/data.php [NC]
 RewriteRule ^api/data/$ /api/data.php [NC]
+
+RewriteRule ^api/captcha$ /api/captcha.php [NC]
+RewriteRule ^api/captcha/$ /api/captcha.php [NC]
