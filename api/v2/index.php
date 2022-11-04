@@ -15,7 +15,7 @@ if($_GET['q'] == ''){
         )
     ));
 
-
+    echo $json;
 }elseif
 (is_numeric($_GET['q']) and $_GET['q'] <= $FOX_NUM) {
     $random_fox_index = $_GET['q'];
@@ -37,6 +37,8 @@ if($_GET['q'] == ''){
             'dataServ' => 'https://api.wuffs.net/api/data'
         )
     ));
+
+    echo $json;
 
 }
 elseif ($_GET['q'] == 'random' or $_GET['q'] == 'rand' or $_GET['q'] == 'r') {
@@ -60,6 +62,8 @@ elseif ($_GET['q'] == 'random' or $_GET['q'] == 'rand' or $_GET['q'] == 'r') {
             'dataServ' => 'https://api.wuffs.net/api/data'
         )
     ));
+
+    echo $json;
 
 }
 else {
