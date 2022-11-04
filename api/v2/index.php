@@ -4,14 +4,14 @@ header('Content-Type: application/json');
 
 $FOX_NUM = 32;
 $notFound = http_response_code(521);
-$noQuery = http_response_code(400);
+#$noQuery = http_response_code(400);
 
 if($_GET['q'] == ''){
 
     $json = json_encode(array(
         "client" => array(
             'error' => 'No query was provided',
-            'code' => $noQuery
+            'code' => '404'
         )
     ));
 
