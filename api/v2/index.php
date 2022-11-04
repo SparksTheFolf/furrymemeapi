@@ -29,5 +29,5 @@ $json = json_encode(array(
 ));
 
 echo $json;
-
+echo $_GET['q'];  //Output: myquery
 
