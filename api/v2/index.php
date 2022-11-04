@@ -61,7 +61,8 @@ elseif ($_GET['q'] == 'random' or $_GET['q'] == 'rand' or $_GET['q'] == 'r') {
         )
     ));
 
-} else {
+}
+else {
     $json = json_encode(array(
         "client" => array(
             'error' => 'API query not found or Invalid meme input',
@@ -69,7 +70,7 @@ elseif ($_GET['q'] == 'random' or $_GET['q'] == 'rand' or $_GET['q'] == 'r') {
         )
     ));
 
-}
-echo $json;
+    echo $json;
 
+}
 
