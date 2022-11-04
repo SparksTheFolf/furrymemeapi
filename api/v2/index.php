@@ -1,4 +1,5 @@
 <?php
+require_once "config.php";
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
@@ -11,6 +12,10 @@ $serverVersion = '2022.0.5.1';
 $releaseVersion = '2022.1.0.0';
 
 #Example request: https://api.wuffs.net/api/v2/?q=r&key=bm9sYW4gdHJhcHAgQWJjMTIzbm9sYW50MTA4Iw==
+
+$query = "SELECT * FROM users WHERE apikey = '$apikey'";
+
+$result = $mysqli->query($query);
 
 if(empty($rqKEY)){
     $json = json_encode(array(
