@@ -12,17 +12,8 @@ $releaseVersion = '2022.1.0.0';
 
 
 
-
-
-
 if($request == ''){
 
-    if($rqKEY == empty($rqKEY)) {
-        echo json_encode(array('error' => 'No API key provided'));
-        exit();
-
-
-    }elseif ($rqKEY == '1234567890') {
 
 
         $json = json_encode(array(
@@ -34,7 +25,6 @@ if($request == ''){
 
         echo $json;
 
-    }
 }elseif
 (is_numeric($request) and $request <= $FOX_NUM) {
     $random_fox_index = rand(1, $FOX_NUM);
