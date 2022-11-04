@@ -6,6 +6,12 @@ $FOX_NUM = 32;
 $notFound = http_response_code(521);
 #$noQuery = http_response_code(400);
 $request = $_GET['q'];
+$random_fox_index = $request;
+$serverVersion = '2022.0.5.1';
+$releaseVersion = '2022.1.0.0';
+$pagecontents = file_get_contents('https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/txt/'.$random_fox_index.'.txt');
+$random_fox_index = rand(1, $FOX_NUM);
+
 
 if($request == ''){
 
@@ -19,20 +25,16 @@ if($request == ''){
     echo $json;
 }elseif
 (is_numeric($request) and $request <= $FOX_NUM) {
-    $random_fox_index = $_GET['q'];
-    $serverVersion = '2022.0.5.1';
-    $releaseVersion = '2022.1.0.0';
 
 
     $qr = 'https://s.wuffs.net/api'.$random_fox_index.'.qr';
     $link = 'https://github.com/SparksTheFolf/apiphotos/blob/Master/'.$random_fox_index.'.jpg?raw=true';
-   # $pagecontents = file_get_contents('https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/txt/'.$random_fox_index.'.txt');
 
     $json = json_encode(array(
         "client" => array(
             'rawLink' => $link,
-            'qrCode' => $qr#,
-           # 'aboutMeme' => $pagecontents
+            'qrCode' => $qr,
+            'aboutMeme' => $pagecontents
         ),
         "data" => array(
             'dataServ' => 'https://api.wuffs.net/api/data'
@@ -43,21 +45,17 @@ if($request == ''){
 
 }
 elseif ($request == 'random' or $request == 'rand' or $request == 'r') {
-    $random_fox_index = rand(1, $FOX_NUM);
-    $serverVersion = '2022.0.5.1';
-    $releaseVersion = '2022.1.0.0';
 
 
     $qr = 'https://s.wuffs.net/api'.$random_fox_index.'.qr';
     $link = 'https://github.com/SparksTheFolf/apiphotos/blob/Master/'.$random_fox_index.'.jpg?raw=true';
- #   $pagecontents = file_get_contents('https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/txt/'.$random_fox_index.'.txt'); # or die("NULL /// No about file found");
 
 
     $json = json_encode(array(
         "client" => array(
             'rawLink' => $link,
-            'qrCode' => $qr#,
-           # 'aboutMeme' => $pagecontents
+            'qrCode' => $qr,
+           'aboutMeme' => $pagecontents
         ),
         "data" => array(
             'dataServ' => 'https://api.wuffs.net/api/data'
