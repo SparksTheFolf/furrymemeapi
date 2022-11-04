@@ -47,7 +47,6 @@ if($request == ''){
 }
 elseif ($request == 'random' or $request == 'rand' or $request == 'r') {
     $random_fox_index = rand(1, $FOX_NUM);
-    $random_fox_index = $request;
 
 
     $qr = 'https://s.wuffs.net/api'.$random_fox_index.'.qr';
