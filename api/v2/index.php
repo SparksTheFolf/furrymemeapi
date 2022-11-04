@@ -29,6 +29,9 @@ if($_GET['q'] == ''){
     $link = 'https://github.com/SparksTheFolf/apiphotos/blob/Master/'.$random_fox_index.'.jpg?raw=true';
     $pagecontents = file_get_contents('https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/txt/'.$random_fox_index.'.txt') or http_response_code(404);
 
+    if(!$pagecontents){
+        $pagecontents = 'No description was provided';
+    }
 
 
     $json = json_encode(array(
