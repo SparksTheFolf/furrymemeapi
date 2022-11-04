@@ -5,8 +5,9 @@ header('Content-Type: application/json');
 $FOX_NUM = 32;
 $notFound = http_response_code(521);
 #$noQuery = http_response_code(400);
+$request = $_GET['q'];
 
-if($_GET['q'] == ''){
+if($request == ''){
 
     $json = json_encode(array(
         "client" => array(
@@ -17,7 +18,7 @@ if($_GET['q'] == ''){
 
     echo $json;
 }elseif
-(is_numeric($_GET['q']) and $_GET['q'] <= $FOX_NUM) {
+(is_numeric($request) and $request <= $FOX_NUM) {
     $random_fox_index = $_GET['q'];
     $serverVersion = '2022.0.5.1';
     $releaseVersion = '2022.1.0.0';
@@ -41,7 +42,7 @@ if($_GET['q'] == ''){
     echo $json;
 
 }
-elseif ($_GET['q'] == 'random' or $_GET['q'] == 'rand' or $_GET['q'] == 'r') {
+elseif ($request == 'random' or $request == 'rand' or $request == 'r') {
     $random_fox_index = rand(1, $FOX_NUM);
     $serverVersion = '2022.0.5.1';
     $releaseVersion = '2022.1.0.0';
