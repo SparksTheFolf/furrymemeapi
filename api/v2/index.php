@@ -6,30 +6,35 @@ $FOX_NUM = 32;
 $notFound = http_response_code(521);
 #$noQuery = http_response_code(400);
 $request = $_GET['q'];
+$rqKEY = $_GET['key'];
 $serverVersion = '2022.0.5.1';
 $releaseVersion = '2022.1.0.0';
-$rqKEY = $_GET['key'];
 
 
-if($rqKEY == empty($rqKEY)) {
-    echo json_encode(array('error' => 'No API key provided'));
-    exit();
 
-
-}else{
 
 
 
 if($request == ''){
 
-    $json = json_encode(array(
-        "client" => array(
-            'error' => 'No query was provided',
-            'code' => '404'
-        )
-    ));
+    if($rqKEY == empty($rqKEY)) {
+        echo json_encode(array('error' => 'No API key provided'));
+        exit();
 
-    echo $json;
+
+    }elseif ($rqKEY == '1234567890') {
+
+
+        $json = json_encode(array(
+            "client" => array(
+                'error' => 'No query was provided',
+                'code' => '404'
+            )
+        ));
+
+        echo $json;
+
+    }
 }elseif
 (is_numeric($request) and $request <= $FOX_NUM) {
     $random_fox_index = rand(1, $FOX_NUM);
@@ -87,5 +92,3 @@ else {
     echo $json;
 
 }
-
-} //end of else
