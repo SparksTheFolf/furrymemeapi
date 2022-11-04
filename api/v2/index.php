@@ -33,7 +33,7 @@ if(empty($rqKEY)){
 else{
 
 if ($result) {
-    if (mysqli_num_rows($result) > 0) {
+
 
 if($request == ''){
 
@@ -93,7 +93,6 @@ if ($request == 'random' or $request == 'rand' or $request == 'r') {
 
     echo $json;
 
-}
 }
 }
 }
