@@ -6,6 +6,7 @@ header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
 
 $serverVersion = '2022.0.5.1';
 $releaseVersion = '2022.1.0.0';
+$FOX_NUM = 32;
 
 $pagecontents = file_get_contents('https://wuffs.net/.well-known/security.txt'); # or die("NULL /// No about file found");
 
@@ -14,6 +15,7 @@ $json = json_encode(array(
     "serverData" => array(
         'serverVersion' => $serverVersion,
         'releaseVersion' => $releaseVersion,
+        'currentMemesCount' => $FOX_NUM,
         'currentAPI' => 'v2',
         'requestedTime' => date('Y-m-d H:i:s'),
         'locale' => "en-US"

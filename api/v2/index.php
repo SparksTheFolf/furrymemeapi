@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 header('Access-Control-Allow-Methods: GET');
 header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
 
-global/*$FOX_NUM*/ $FOX_NUM;
+$FOX_NUM = 32;
 
 if($_GET['q'] == ''){
 
