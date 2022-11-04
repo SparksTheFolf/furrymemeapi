@@ -9,8 +9,8 @@ $request = $_GET['q'];
 $random_fox_index = $request;
 $serverVersion = '2022.0.5.1';
 $releaseVersion = '2022.1.0.0';
-$pagecontents = file_get_contents('https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/txt/'.$random_fox_index.'.txt');
 $random_fox_index = rand(1, $FOX_NUM);
+$pagecontents = file_get_contents('https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/txt/'.$random_fox_index.'.txt');
 
 
 if($request == ''){
