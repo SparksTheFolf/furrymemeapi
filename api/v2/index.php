@@ -13,10 +13,18 @@ $releaseVersion = '2022.1.0.0';
 
 #Example request: https://api.wuffs.net/api/v2/?q=r&key=bm9sYW4gdHJhcHAgQWJjMTIzbm9sYW50MTA4Iw==
 
-$query = "SELECT * FROM users WHERE apikey = '$apikey'";
-
-$result = $mysqli->query($query);
-
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'php');
+define('DB_PASSWORD', 'Myfourkids2022!');
+define('DB_NAME', 'php');
+ 
+/* Attempt to connect to MySQL database */
+$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+ 
+// Check connection
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
 
 
 if(empty($rqKEY)){
@@ -32,7 +40,7 @@ if(empty($rqKEY)){
 
 else{
 
-if ($result) {
+if(mysql_num_rows(mysql_query("SELECT apikey FROM users WHERE apikey = '$apikey'"))){
 
 
 if($request == ''){
