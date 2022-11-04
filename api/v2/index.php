@@ -8,6 +8,10 @@ $notFound = http_response_code(521);
 $request = $_GET['q'];
 $serverVersion = '2022.0.5.1';
 $releaseVersion = '2022.1.0.0';
+$rqKEY = $_GET['key'];
+
+
+if($rqKEY == '') {
 
 
 
@@ -79,3 +83,13 @@ else {
 
 }
 
+} else {
+    $json = json_encode(array(
+        "client" => array(
+            'error' => 'Invalid API key',
+            'code' => '403',
+        )
+    ));
+
+    echo $json;
+}
