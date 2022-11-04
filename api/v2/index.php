@@ -12,11 +12,6 @@ $serverVersion = '2022.0.5.1';
 $releaseVersion = '2022.1.0.0';
 
 #Example request: https://api.wuffs.net/api/v2/?q=r&key=bm9sYW4gdHJhcHAgQWJjMTIzbm9sYW50MTA4Iw==
- 
-// Check connection
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
 
 
 if(empty($rqKEY)){
@@ -32,14 +27,7 @@ if(empty($rqKEY)){
 
 else{
 
-    $query = "SELECT apikey FROM users WHERE apikey =?";
-
-if($stmt=$connection->prepare($query)){
-        $stmt->bind_param('s',$userid);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        if($result->num_rows >0 ){
-
+if(mysql_num_rows(mysql_query("SELECT apikey FROM users WHERE apikey =?'"))){
 if($request == ''){
 
         $json = json_encode(array(
@@ -106,6 +94,5 @@ if ($request == 'random' or $request == 'rand' or $request == 'r') {
     ));
 
     echo $json;
-}
 }
 }
