@@ -17,7 +17,7 @@ if($_GET['q'] == ''){
 
 
 }elseif
-($_GET['q'] == is_numeric($_GET['q']) and $_GET['q'] <= $FOX_NUM) {
+(is_numeric($_GET['q']) and $_GET['q'] <= $FOX_NUM) {
     $random_fox_index = $_GET['q'];
     $serverVersion = '2022.0.5.1';
     $releaseVersion = '2022.1.0.0';
