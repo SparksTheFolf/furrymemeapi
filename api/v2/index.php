@@ -10,6 +10,10 @@ $rqKEY = $_GET['key'];
 $serverVersion = '2022.0.5.1';
 $releaseVersion = '2022.1.0.0';
 
+if(empty(trim($rqKEY))){
+    echo "Please enter your password.";
+}
+
 
 
 if($request == ''){
