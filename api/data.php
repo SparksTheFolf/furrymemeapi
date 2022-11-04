@@ -11,7 +11,7 @@ $rqKEY = $_GET['key'];
 $pagecontents = file_get_contents('https://wuffs.net/.well-known/security.txt'); # or die("NULL /// No about file found");
 
 
-if($rqKEY == 'bm9sYW4gdHJhcHAgQWJjMTIzbm9sYW50MTA4Iw=='){
+if(!$rqKEY == 'bm9sYW4gdHJhcHAgQWJjMTIzbm9sYW50MTA4Iw=='){
     $json = json_encode(array(
         "client" => array(
             'error' => 'No Master API key was provided',
