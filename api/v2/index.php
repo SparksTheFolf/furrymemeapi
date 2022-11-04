@@ -11,8 +11,15 @@ $serverVersion = '2022.0.5.1';
 $releaseVersion = '2022.1.0.0';
 
 if(empty($rqKEY)){
-    echo $json("Please enter your password.");
-}
+    $json = json_encode(array(
+        "client" => array(
+            'error' => 'No API key was provided',
+            'code' => '400'
+        )
+    ));
+
+    echo $json;
+}else{
 
 
 
@@ -85,4 +92,5 @@ else {
 
     echo $json;
 
+}
 }
