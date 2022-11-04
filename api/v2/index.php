@@ -5,7 +5,19 @@ header('Access-Control-Allow-Methods: GET');
 header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
 
 
-if ($_GET['q'] == is_numeric($_GET['q'])) {
+if($_GET['q'] == ''){
+
+    $json = json_encode(array(
+        "client" => array(
+            'error' => 'No query was provided',
+            'code' => '400',
+        )
+    ));
+
+    echo $json;
+
+}elseif
+($_GET['q'] == is_numeric($_GET['q'])) {
     $random_fox_index = $_GET['q'];
     $serverVersion = '2022.0.5.1';
     $releaseVersion = '2022.1.0.0';
