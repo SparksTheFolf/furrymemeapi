@@ -26,13 +26,13 @@ if($_GET['q'] == ''){
 
     $qr = 'https://s.wuffs.net/api'.$random_fox_index.'.qr';
     $link = 'https://github.com/SparksTheFolf/apiphotos/blob/Master/'.$random_fox_index.'.jpg?raw=true';
-    $pagecontents = file_get_contents('https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/txt/'.$random_fox_index.'.txt');
+   # $pagecontents = file_get_contents('https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/txt/'.$random_fox_index.'.txt');
 
     $json = json_encode(array(
         "client" => array(
             'rawLink' => $link,
-            'qrCode' => $qr,
-            'aboutMeme' => $pagecontents
+            'qrCode' => $qr#,
+           # 'aboutMeme' => $pagecontents
         ),
         "data" => array(
             'dataServ' => 'https://api.wuffs.net/api/data'
