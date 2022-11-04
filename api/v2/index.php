@@ -31,7 +31,7 @@ if($_GET['q'] == ''){
 
 
     if ($pagecontents == '') {
-        $pagecontents = http_response_code(206);
+        $pagecontents = http_response_code(404);
     }
 
     $json = json_encode(array(
