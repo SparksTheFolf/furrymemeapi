@@ -32,7 +32,7 @@ if(empty($rqKEY)){
 
 else{
 
-if(mysql_num_rows(mysql_query("SELECT apikey FROM users WHERE apikey = '$apikey'"))){
+
 
 
 if($request == ''){
@@ -95,4 +95,4 @@ if ($request == 'random' or $request == 'rand' or $request == 'r') {
 
 }
 }
-}
+
