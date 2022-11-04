@@ -24,7 +24,6 @@ if($_GET['q'] == ''){
     $releaseVersion = '2022.1.0.0';
 
 
-    $image_path = 'https://s.wuffs.net/api'.$random_fox_index;
     $qr = 'https://s.wuffs.net/api'.$random_fox_index.'.qr';
     $link = 'https://github.com/SparksTheFolf/apiphotos/blob/Master/'.$random_fox_index.'.jpg?raw=true';
     $pagecontents = file_get_contents('https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/txt/'.$random_fox_index.'.txt'); # or die("NULL /// No about file found");
@@ -32,7 +31,6 @@ if($_GET['q'] == ''){
 
     $json = json_encode(array(
         "client" => array(
-            'image' => $image_path,
             'rawLink' => $link,
             'qrCode' => $qr,
             'aboutMeme' => $pagecontents
