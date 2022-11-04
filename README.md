@@ -10,5 +10,8 @@ Code Maintained by [SparksTheFolf](mailto:sparks@wuffs.net)\
 Code Licensed under [MIT](LICENSE)\
 The security policy is located in [SECURITY.md](SECURITY.md)
 
+## CDN
+The cdn to post new photos is available [here](https://github.com/SparksTheFolf/apiphotos)
+
 ## Well-Known Security.txt Vulnerabilities report
 [Security.txt](https://wuffs.net/.well-known/security.txt) is a standard for reporting security vulnerabilities.
