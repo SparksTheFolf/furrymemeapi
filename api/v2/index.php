@@ -27,7 +27,7 @@ if(empty($rqKEY)){
 
 else{
 
-if(mysqli_num_rows(mysqli_query("SELECT apikey FROM users WHERE apikey =?'"))){
+if(mysqli_num_rows(mysqli_query("SELECT * FROM users WHERE apikey =?'"))){
 if($request == ''){
 
         $json = json_encode(array(
