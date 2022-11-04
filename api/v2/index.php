@@ -4,6 +4,8 @@ header('Content-Type: application/json');
 header('Access-Control-Allow-Methods: GET');
 header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
 
+$FOX_NUM = 32;
+
 
 if($_GET['q'] == ''){
 
@@ -17,7 +19,7 @@ if($_GET['q'] == ''){
     echo $json;
 
 }elseif
-($_GET['q'] == is_numeric($_GET['q'])) {
+($_GET['q'] == is_numeric($_GET['q']) and $_GET['q'] <= $FOX_NUM) {
     $random_fox_index = $_GET['q'];
     $serverVersion = '2022.0.5.1';
     $releaseVersion = '2022.1.0.0';
@@ -45,7 +47,6 @@ if($_GET['q'] == ''){
 
 }
 elseif ($_GET['q'] == 'random') {
-    $FOX_NUM = 32;
     $random_fox_index = rand(1, $FOX_NUM);
     $serverVersion = '2022.0.5.1';
     $releaseVersion = '2022.1.0.0';
@@ -74,7 +75,7 @@ elseif ($_GET['q'] == 'random') {
 } else {
     $json = json_encode(array(
         "client" => array(
-            'error' => 'API query not found',
+            'error' => 'API query not found or Invalid meme integer',
             'code' => '404',
         )
     ));
