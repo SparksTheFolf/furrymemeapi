@@ -32,7 +32,11 @@ if(empty($rqKEY)){
 
 else{
 
+    $query = "SELECT apikey FROM users WHERE apikey =?";
 
+    $result = $mysqli->query($query);
+    
+if ($result) {
 
 
 if($request == ''){
@@ -94,5 +98,14 @@ if ($request == 'random' or $request == 'rand' or $request == 'r') {
     echo $json;
 
 }
-}
+}else{
+    $json = json_encode(array(
+        "client" => array(
+            'error' => 'Invalid API key',
+            'code' => '401'
+        )
+    ));
 
+    echo $json;
+}
+}
