@@ -29,9 +29,9 @@ if($_GET['q'] == ''){
     $link = 'https://github.com/SparksTheFolf/apiphotos/blob/Master/'.$random_fox_index.'.jpg?raw=true';
     $pagecontents = file_get_contents('https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/txt/'.$random_fox_index.'.txt'); # or die("NULL /// No about file found");
 
-    
+
     if (!$pagecontents) {
-        $pagecontents = http_response_code(204);
+        $pagecontents = http_response_code(206);
     }
 
     $json = json_encode(array(
