@@ -28,8 +28,7 @@ if(empty($rqKEY)){
 else{
 
     
-$query = "SELECT * FROM users WHERE apikey =?";
-$result = mysqli_query($query);
+$result = mysqli_query('SELECT * FROM users WHERE apikey =?');
 if ($result) {
   if (mysqli_num_rows($result) > 0) {
 if($request == ''){
