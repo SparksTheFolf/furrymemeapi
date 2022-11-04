@@ -12,14 +12,6 @@ $serverVersion = '2022.0.5.1';
 $releaseVersion = '2022.1.0.0';
 
 #Example request: https://api.wuffs.net/api/v2/?q=r&key=bm9sYW4gdHJhcHAgQWJjMTIzbm9sYW50MTA4Iw==
-
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'php');
-define('DB_PASSWORD', 'Myfourkids2022!');
-define('DB_NAME', 'php');
- 
-/* Attempt to connect to MySQL database */
-$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
  
 // Check connection
 if($link === false){
