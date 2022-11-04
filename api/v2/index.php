@@ -29,12 +29,7 @@ if($_GET['q'] == ''){
     $qr = 'https://s.wuffs.net/api'.$random_fox_index.'.qr';
     $link = 'https://github.com/SparksTheFolf/apiphotos/blob/Master/'.$random_fox_index.'.jpg?raw=true';
     $pagecontents = file_get_contents('https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/txt/'.$random_fox_index.'.txt');
-
-    if(!$pagecontents){
-        $pagecontents = $notFound;
-    }
-
-
+    
     $json = json_encode(array(
         "client" => array(
             'rawLink' => $link,
