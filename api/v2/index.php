@@ -34,14 +34,13 @@ else{
 
     $query = "SELECT apikey FROM users WHERE apikey =?";
 
-    $result = $mysqli->query($query);
-    
-if ($result) {
-
+if($stmt=$connection->prepare($query)){
+        $stmt->bind_param('s',$userid);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if($result->num_rows >0 ){
 
 if($request == ''){
-
-
 
         $json = json_encode(array(
             "client" => array(
@@ -107,5 +106,6 @@ if ($request == 'random' or $request == 'rand' or $request == 'r') {
     ));
 
     echo $json;
+}
 }
 }
