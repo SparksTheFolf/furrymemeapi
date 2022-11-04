@@ -31,8 +31,8 @@ if ($_GET['q'] == is_numeric($_GET['q'])) {
 
     echo $json;
 
-} else{
-    
+}
+elseif ($_GET['q'] == 'random') {
     $FOX_NUM = 32;
     $random_fox_index = rand(1, $FOX_NUM);
     $serverVersion = '2022.0.5.1';
