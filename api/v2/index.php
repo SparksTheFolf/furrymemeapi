@@ -36,8 +36,8 @@ if($request == ''){
 
         echo $json;
 
-}elseif
-(is_numeric($request) and $request <= $FOX_NUM) {
+}
+if(is_numeric($request) and $request <= $FOX_NUM) {
     $random_fox_index = rand(1, $FOX_NUM);
     $random_fox_index = $request;
 
@@ -60,7 +60,7 @@ if($request == ''){
     echo $json;
 
 }
-elseif ($request == 'random' or $request == 'rand' or $request == 'r') {
+if ($request == 'random' or $request == 'rand' or $request == 'r') {
     $random_fox_index = rand(1, $FOX_NUM);
 
 
@@ -76,17 +76,6 @@ elseif ($request == 'random' or $request == 'rand' or $request == 'r') {
         ),
         "data" => array(
             'dataServ' => 'https://api.wuffs.net/api/data'
-        )
-    ));
-
-    echo $json;
-
-}
-else {
-    $json = json_encode(array(
-        "client" => array(
-            'error' => 'API query not found or Invalid meme input',
-            'code' => '404',
         )
     ));
 
