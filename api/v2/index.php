@@ -71,6 +71,15 @@ elseif ($_GET['q'] == 'random') {
 
     echo $json;
 
+} else {
+    $json = json_encode(array(
+        "client" => array(
+            'error' => 'API query not found',
+            'code' => '404',
+        )
+    ));
+
+    echo $json;
 }
 
 
