@@ -19,17 +19,16 @@ if(empty($rqKEY)){
     ));
 
     echo $json;
-}else{
+}
 
-
-
+else{
 if($request == ''){
 
 
 
         $json = json_encode(array(
             "client" => array(
-                'error' => 'No query was provided or No API key was provided',
+                'error' => 'No query was provided',
                 'code' => '404'
             )
         ));
