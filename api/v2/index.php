@@ -4,17 +4,16 @@ header('Content-Type: application/json');
 
 $FOX_NUM = 32;
 $notFound = http_response_code(521);
+$noQuery = http_response_code(400);
 
 if($_GET['q'] == ''){
 
     $json = json_encode(array(
         "client" => array(
             'error' => 'No query was provided',
-            'code' => '400',
+            'code' => $noQuery
         )
     ));
-
-    echo $json;
 
 
 }elseif
@@ -39,8 +38,6 @@ if($_GET['q'] == ''){
         )
     ));
 
-    echo $json;
-
 }
 elseif ($_GET['q'] == 'random' or $_GET['q'] == 'rand' or $_GET['q'] == 'r') {
     $random_fox_index = rand(1, $FOX_NUM);
@@ -64,8 +61,6 @@ elseif ($_GET['q'] == 'random' or $_GET['q'] == 'rand' or $_GET['q'] == 'r') {
         )
     ));
 
-    echo $json;
-
 } else {
     $json = json_encode(array(
         "client" => array(
@@ -74,7 +69,7 @@ elseif ($_GET['q'] == 'random' or $_GET['q'] == 'rand' or $_GET['q'] == 'r') {
         )
     ));
 
-    echo $json;
 }
+echo $json;
 
 
