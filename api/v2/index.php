@@ -30,7 +30,7 @@ if($_GET['q'] == ''){
     $pagecontents = file_get_contents('https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/txt/'.$random_fox_index.'.txt'); # or die("NULL /// No about file found");
 
     if (!$pagecontents) {
-        $pagecontents = http_response_code(400);
+        $pagecontents = http_response_code(204);
     }
 
     $json = json_encode(array(
