@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 header('Access-Control-Allow-Methods: GET');
 header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
 
-$serverVersion = '2022.0.5.1';
+$serverVersion = '2022.0.6.3';
 $releaseVersion = '2022.1.0.0';
 $FOX_NUM = 32;
 
