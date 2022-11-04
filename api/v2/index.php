@@ -11,7 +11,12 @@ $releaseVersion = '2022.1.0.0';
 $rqKEY = $_GET['key'];
 
 
-if($rqKEY == '') {
+if($rqKEY == empty($rqKEY)) {
+    echo json_encode(array('error' => 'No API key provided'));
+    exit();
+
+
+}else{
 
 
 
@@ -83,13 +88,4 @@ else {
 
 }
 
-} else {
-    $json = json_encode(array(
-        "client" => array(
-            'error' => 'Invalid API key',
-            'code' => '403',
-        )
-    ));
-
-    echo $json;
-}
+} //end of else
