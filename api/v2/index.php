@@ -46,7 +46,7 @@ if($_GET['q'] == ''){
     echo $json;
 
 }
-elseif ($_GET['q'] == 'random') {
+elseif ($_GET['q'] == 'random' or $_GET['q'] == 'rand') {
     $random_fox_index = rand(1, $FOX_NUM);
     $serverVersion = '2022.0.5.1';
     $releaseVersion = '2022.1.0.0';
