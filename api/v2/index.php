@@ -5,6 +5,7 @@ header('Access-Control-Allow-Methods: GET');
 header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
 
 $FOX_NUM = 32;
+$notFound = http_response_code(521);
 
 if($_GET['q'] == ''){
 
@@ -30,7 +31,7 @@ if($_GET['q'] == ''){
     $pagecontents = file_get_contents('https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/txt/'.$random_fox_index.'.txt') or http_response_code(404);
 
     if(!$pagecontents){
-        $pagecontents = 'No description was provided';
+        $pagecontents = $notFound;
     }
 
 
