@@ -6,7 +6,6 @@ $FOX_NUM = 32;
 $notFound = http_response_code(521);
 #$noQuery = http_response_code(400);
 $request = $_GET['q'];
-$random_fox_index = $request;
 $serverVersion = '2022.0.5.1';
 $releaseVersion = '2022.1.0.0';
 
@@ -25,6 +24,7 @@ if($request == ''){
 }elseif
 (is_numeric($request) and $request <= $FOX_NUM) {
     $random_fox_index = rand(1, $FOX_NUM);
+    $random_fox_index = $request;
 
 
     $qr = 'https://s.wuffs.net/api'.$random_fox_index.'.qr';
@@ -47,6 +47,7 @@ if($request == ''){
 }
 elseif ($request == 'random' or $request == 'rand' or $request == 'r') {
     $random_fox_index = rand(1, $FOX_NUM);
+    $random_fox_index = $request;
 
 
     $qr = 'https://s.wuffs.net/api'.$random_fox_index.'.qr';
