@@ -66,14 +66,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Check input errors before inserting in database
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
 
-        $apiStart = base64_encode($username, $password);
+        $apiStart = base64_encode($username);
+        $apiEnd = base64_encode($password);
+        $apikeyfinal = $apiStart.$apiEnd;
         
         // Prepare an insert statement
         $sql = "INSERT INTO users (username, password, apikey) VALUES (?, ?, ?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password, $apiStart);
+            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password, $apikeyfinal);
             
             // Set parameters
             $param_username = $username;
@@ -82,7 +84,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page
-                echo "Your API key is: " . $apiStart;
+                echo "Your API key is: " . $apikeyfinal;
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
             }
