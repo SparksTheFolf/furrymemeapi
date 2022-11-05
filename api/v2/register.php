@@ -68,7 +68,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         $apiStart = base64_encode($username);
         $apiEnd = base64_encode($password);
-        $apikeyfinal = $apiStart.$apiEnd;
+        $apitime = base64_encode(time());
+        $apikeyfinal = $apiStart.$apiEnd.$apitime;
         
         // Prepare an insert statement
         $sql = "INSERT INTO users (username, password, apikey) VALUES (?, ?, ?)";
@@ -85,7 +86,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page
-                echo "Your API key is: " . $apikeyfinal;
+                ?>
+                <script>
+                    alert("Account created successfully. \nYour API key is: <?php echo $apikeyfinal; ?> \n !!This will be the only time it is shown!!");
+                </script>
+                <?php
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
             }
@@ -113,8 +118,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
     <div class="wrapper">
-        <h2>Player Add</h2>
-        <p>Please fill this form to create an account for a Scouter</p>
+        <h2>Make an account </h2>
+        <p>Please fill this form to create an account for access and an API key</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group">
                 <label>Username</label>
@@ -136,8 +141,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="reset" class="btn btn-secondary ml-2" value="Reset">
         <br />
 <p>
-
-<a href="/admin/landing/" class="btn btn-info">Return Home!</a>
 
 </p>  
 	  </div>
