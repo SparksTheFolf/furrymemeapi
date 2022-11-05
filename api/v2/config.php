@@ -1,5 +1,5 @@
 <?php
-define('DB_SERVER', 'https://api.wuffs.net/');
+define('DB_SERVER', 'api.wuffs.net');
 define('DB_USERNAME', 'php');
 define('DB_PASSWORD', 'Myfourkids2022!');
 define('DB_NAME', 'meme');
