@@ -11,7 +11,7 @@ $rqKEY = $_GET['key'];
 $serverVersion = '2022.0.5.1';
 $releaseVersion = '2022.1.0.0';
 
-#Example request: https://api.wuffs.net/api/v2/?q=r&key=bm9sYW4gdHJhcHAgQWJjMTIzbm9sYW50MTA4Iw==
+#Example request: https://api.wuffs.net/api/v2/?q=r&user=bm9sYW4gdHJhcHAgQWJjMTIzbm9sYW50MTA4Iw==
 
 
 if(empty($rqKEY)){
