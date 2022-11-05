@@ -28,10 +28,24 @@ if(empty($rqKEY)){
 else{
 
 
-    $sql = "SELECT apikey FROM users WHERE apikey = ?";
+        // Prepare a select statement
+       $sql = "SELECT apikey FROM users WHERE apikey = ?";
         
-      
-
+        if($stmt = mysqli_prepare($link, $sql)){
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "s", $param_username);
+            
+            // Set parameters
+            $param_username = trim($rqKEY);
+            
+            // Attempt to execute the prepared statement
+            if(mysqli_stmt_execute($stmt)){
+                /* store result */
+                mysqli_stmt_store_result($stmt);
+                
+                if(mysqli_stmt_num_rows($stmt) == 1){
+        
+    
 if($request == ''){
 
         $json = json_encode(array(
@@ -100,4 +114,6 @@ if ($request == 'random' or $request == 'rand' or $request == 'r') {
 #
 #    echo $json;
 #}
-
+}
+}
+}
