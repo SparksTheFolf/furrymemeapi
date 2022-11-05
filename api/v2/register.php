@@ -66,7 +66,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Check input errors before inserting in database
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
 
-        $apiStart = base64_encode($username + $password + date("Y-m-d H:i:s"));
+        $apiStart = base64_encode($username, $password);
         
         // Prepare an insert statement
         $sql = "INSERT INTO users (username, password, apikey) VALUES (?, ?, ?)";
