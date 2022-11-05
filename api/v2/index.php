@@ -45,6 +45,8 @@ else{
             )
         ));
 
+        echo $json;
+
 
         
     }
