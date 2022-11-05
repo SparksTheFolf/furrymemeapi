@@ -71,11 +71,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $apikeyfinal = $apiStart.$apiEnd;
         
         // Prepare an insert statement
-        $sql = "INSERT INTO users (username, password, apikey) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO users (username, password, apikey) VALUES (?, ?, $apikeyfinal)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password, $apikeyfinal);
+            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
             
             // Set parameters
             $param_username = $username;
