@@ -71,16 +71,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $apikeyfinal = $apiStart.$apiEnd;
         
         // Prepare an insert statement
-        $sql = "INSERT INTO users (username, password, apikey) VALUES (?, ?, $apikeyfinal)";
+        $sql = "INSERT INTO users (username, password, apikey) VALUES (?, ?, ?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
+            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password, $param_apikey);
             
             // Set parameters
             $param_username = $username;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
-            
+            $param_apikey = $apikeyfinal;
+
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page
