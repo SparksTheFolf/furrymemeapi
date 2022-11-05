@@ -27,10 +27,11 @@ if(empty($rqKEY)){
 
 else{
 
-    
-$result = mysqli_query('SELECT * FROM users WHERE apikey =?');
-if ($result) {
-  if (mysqli_num_rows($result) > 0) {
+
+    $sql = "SELECT apikey FROM users WHERE apikey = ?";
+        
+      
+
 if($request == ''){
 
         $json = json_encode(array(
@@ -88,15 +89,15 @@ if ($request == 'random' or $request == 'rand' or $request == 'r') {
     echo $json;
 
 }
-}else{
-    $json = json_encode(array(
-        "client" => array(
-            'error' => 'Invalid API key',
-            'code' => '401'
-        )
-    ));
+}
+#else{
+ #   $json = json_encode(array(
+#        "client" => array(
+ #           'error' => 'Invalid API key',
+ #           'code' => '401'
+#        )
+#    ));
+#
+#    echo $json;
+#}
 
-    echo $json;
-}
-}
-}
