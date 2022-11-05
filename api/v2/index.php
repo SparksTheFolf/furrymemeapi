@@ -27,6 +27,28 @@ if(empty($rqKEY)){
 
 else{
 
+    if($rqKEY == 'example'){
+    
+    
+        $qr = 'https://s.wuffs.net/api2.qr';
+        $link = 'https://github.com/SparksTheFolf/apiphotos/blob/Master/2.jpg?raw=true';
+        $pagecontents = file_get_contents('https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/txt/2.txt');
+    
+        $json = json_encode(array(
+            "client" => array(
+                'rawLink' => $link,
+                'qrCode' => $qr,
+                'aboutMeme' => $pagecontents
+            ),
+            "data" => array(
+                'message' => 'This is just an example view of the API, to request full access please contact SparksTheFolf#3621 on Discord',
+            )
+        ));
+
+
+        
+    }else{
+
 
         // Prepare a select statement
        $sql = "SELECT apikey FROM users WHERE apikey = ?";
@@ -112,6 +134,7 @@ else{
     ));
 
     echo $json;
+}
 }
 }
 }
