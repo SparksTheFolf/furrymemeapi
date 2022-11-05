@@ -47,7 +47,7 @@ else{
 
 
         
-    }else{
+    }
 
 
         // Prepare a select statement
@@ -134,7 +134,6 @@ else{
     ));
 
     echo $json;
-}
 }
 }
 }
