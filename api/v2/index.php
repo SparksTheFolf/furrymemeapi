@@ -1,5 +1,5 @@
 <?php
-require_once "config.php";
+require_once "multi/bruh/config.php";
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
