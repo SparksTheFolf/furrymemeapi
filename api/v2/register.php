@@ -69,7 +69,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $apiStart = base64_encode($username);
         $apiEnd = base64_encode($password);
         $apitime = base64_encode(time());
-        $apikeyfinal = $apiStart.$apiEnd.$apitime;
+        $apirough = $apiStart.$apitime.$apiEnd;
+        $apikeyfinal = base64_encode($apirough);
         
         // Prepare an insert statement
         $sql = "INSERT INTO users (username, password, apikey) VALUES (?, ?, ?)";
