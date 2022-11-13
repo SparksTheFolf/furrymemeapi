@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="PS-222.4345.15">
+    <data-source name="api.wuffs.net" uuid="b17e9a89-e203-4b57-8e98-0825c50927a4">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>php</user-name>
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>
