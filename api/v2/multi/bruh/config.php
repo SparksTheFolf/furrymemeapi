@@ -1,11 +1,17 @@
 <?php
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'php');
-define('DB_PASSWORD', 'Myfourkids2022!');
-define('DB_NAME', 'meme');
- 
+
+require 'vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable('../../../../../env/.env');
+$dotenv->load();
+
+$DB_SERVER = getenv('DBSERVER');
+$DB_USERNAME = getenv('DBUSERNAME');
+$DB_PASSWORD = getenv('DBPASSWORD');
+$DB_NAME = getenv('DBUSERNAME');
+
 /* Attempt to connect to MySQL database */
-$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+$link = mysqli_connect($DB_SERVER, $DB_USERNAME, $DB_PASSWORD, $DB_NAME);
  
 // Check connection
 if($link === false){
