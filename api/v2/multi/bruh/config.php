@@ -1,5 +1,7 @@
 <?php
 
+require_once "vendor/vlucas/phpdotenv/src/Dotenv.php";
+
 $dotenv = Dotenv\Dotenv::createImmutable('../../../../../env/.env');
 $dotenv->load();
 
