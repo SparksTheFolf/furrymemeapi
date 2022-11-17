@@ -1,6 +1,6 @@
 <?php
 
-$dotenv = Dotenv\Dotenv::createImmutable('../../../../../env/.env');
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 $DB_SERVER = getenv('DBSERVER');
@@ -15,4 +15,4 @@ $link = mysqli_connect($DB_SERVER, $DB_USERNAME, $DB_PASSWORD, $DB_NAME);
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
-?>
+
