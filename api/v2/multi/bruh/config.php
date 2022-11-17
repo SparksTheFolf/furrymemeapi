@@ -1,6 +1,8 @@
 <?php
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 $DB_SERVER = $_ENV('DBSERVER');
