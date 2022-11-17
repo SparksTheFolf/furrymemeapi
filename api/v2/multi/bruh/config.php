@@ -3,10 +3,10 @@
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-$DB_SERVER = getenv('DBSERVER');
-$DB_USERNAME = getenv('DBUSERNAME');
-$DB_PASSWORD = getenv('DBPASSWORD');
-$DB_NAME = getenv('DBNAME');
+$DB_SERVER = $_ENV('DBSERVER');
+$DB_USERNAME = $_ENV('DBUSERNAME');
+$DB_PASSWORD = $_ENV('DBPASSWORD');
+$DB_NAME = $_ENV('DBNAME');
 
 /* Attempt to connect to MySQL database */
 $link = mysqli_connect($DB_SERVER, $DB_USERNAME, $DB_PASSWORD, $DB_NAME);
