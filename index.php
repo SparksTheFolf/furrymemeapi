@@ -18,7 +18,7 @@
 	<meta name="theme-color" content="#FF6600" />
 	<meta http-equiv="Cache-Control" content="max-age=1" />
 
-    <meta property="og:image" content="https://s.wuffs.net/api<?= $random_fox_index ?>" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?= $random_fox_index ?>.jpg" />
     <meta property="og:title" content="api.wuffs.net" />
     <meta property="og:description" content="New furry meme :)" />
     <meta property="og:url" content="https://api.wuffs.net" />
@@ -74,7 +74,7 @@
 <div id="panel">
 	<div id="sidebar">
 		<label for=shareButton><strong>Share this meme!</strong></label>
-		<input type="text" id="shareButton" value="https://s.wuffs.net/api<?= $random_fox_index ?>" onclick="this.select();" /><br />
+		<input type="text" id="shareButton" value="https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?= $random_fox_index ?>.jpg" onclick="this.select();" /><br />
 
 		<p id="fox_count">Memes Counter: <?= $FOX_NUM ?><br />
 			<a href="https://github.com/SparksTheFolf/apiphotos">Add more memes!</a></p>
@@ -86,8 +86,8 @@
 
 	</div>
 
-	<a href="https://s.wuffs.net/api<?= $random_fox_index ?>" id="fox_full_link">
-		<img src="https://s.wuffs.net/api<?= $random_fox_index ?>" alt="" title="" style="visibility: visible;" id="fox_img_link" />
+	<a href="https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?= $random_fox_index ?>.jpg" id="fox_full_link">
+		<img src="https://raw.githubusercontent.com/SparksTheFolf/apiphotos/Master/<?= $random_fox_index ?>.jpg" alt="" title="" style="visibility: visible;" id="fox_img_link" />
 	</a>
 
     <div id="footer">
